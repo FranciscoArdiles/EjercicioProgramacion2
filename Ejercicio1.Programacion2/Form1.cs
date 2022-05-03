@@ -26,6 +26,62 @@ namespace Ejercicio1.Programacion2
             
             string nombremes = "Test";
             string fechacom = "Test";
+            
+            numday = numday + 1;
+
+
+            if (numday == 30 & nummonth == 2 )
+            {
+                if (numyear % 4 == 0)
+                {
+                    numday = numday - 29;
+                    nummonth = nummonth + 1;
+
+                }
+
+
+            }
+            else if (numday == 29 & nummonth == 2)
+            {
+                if (numyear % 4 != 0)
+                {
+                    numday = numday - 28;
+                    nummonth = nummonth + 1;
+                }
+
+            }
+            else if (numday == 32 & nummonth == 2)
+            {
+                numday = numday - 2;
+
+
+            }
+            else if (numday == 31 &(nummonth == 4 | nummonth == 6 | nummonth == 9 | nummonth == 11))
+            {
+                numday = numday - 30;
+                nummonth = nummonth + 1;
+
+
+            }
+            else if (numday == 32 &(nummonth != 4 & nummonth != 6 & nummonth != 9 & nummonth != 11))
+            {
+                numday = numday - 31;
+                nummonth = nummonth + 1;
+
+            }
+            else if (numday == 32 & (nummonth == 4 | nummonth == 6 | nummonth == 9 | nummonth == 11))
+            {
+                numday = numday - 1;
+
+            }
+
+
+            if (nummonth == 13)
+            {
+                nummonth = nummonth - 12;
+                numyear = numyear + 1;
+            }
+
 
 
             if (nummonth == 1)
